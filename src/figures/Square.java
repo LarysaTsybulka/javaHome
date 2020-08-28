@@ -1,10 +1,12 @@
-public class Rhombus {
-    private int a;
-    private int h;
+package figures;
 
-    public Rhombus(int a, int h) {
+import figures.Figure;
+
+public class Square extends Figure {
+    private int a;
+
+    public Square(int a){
         this.a = a;
-        this.h = h;
     }
 
     public int getA() {
@@ -14,18 +16,9 @@ public class Rhombus {
     public void setA(int a) {
         this.a = a;
     }
-
-    public int getH() {
-        return h;
-    }
-
-    public void setH(int h) {
-        this.h = h;
-    }
-
     public double area(){
         double S;
-        S = a*h;
+        S = Math.pow(a,2);
         return S;
     }
 }

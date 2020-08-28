@@ -1,3 +1,5 @@
+package figures;
+
 public class Circle {
     private int d;
     private static final double PI = Math.PI;

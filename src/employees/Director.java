@@ -1,13 +1,16 @@
-public class Teacher extends Employee{
+package employees;
+
+public class Director extends Employee {
     private String name;
     private String position;
-    private int countOfHours;
+    private int startSalary;
     private static final int workingDays = 24;
+    private static final int coefficient = 15;
 
-    public Teacher(String name, String position, int countOfHours) {
+    public Director(String name, String position, int startSalary) {
         this.name = name;
         this.position = position;
-        this.countOfHours = countOfHours;
+        this.startSalary = startSalary;
     }
 
     public String getName() {
@@ -26,16 +29,16 @@ public class Teacher extends Employee{
         this.position = position;
     }
 
-    public int getCountOfHours() {
-        return countOfHours;
+    public int getStartSalary() {
+        return startSalary;
     }
 
-    public void setCountOfHours(int countOfHours) {
-        this.countOfHours = countOfHours;
+    public void setStartSalary(int startSalary) {
+        this.startSalary = startSalary;
     }
     public double getSalary(){
         double salary;
-        salary = countOfHours*workingDays*10;
+        salary = coefficient*workingDays*startSalary;
         return salary;
     }
 }

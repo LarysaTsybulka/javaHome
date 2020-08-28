@@ -1,3 +1,7 @@
+package figures;
+
+import figures.Figure;
+
 public class Triangle extends Figure {
     private int a;
     private int b;

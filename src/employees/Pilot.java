@@ -1,4 +1,8 @@
-public class Pilot extends Employee{
+package employees;
+
+import employees.Employee;
+
+public class Pilot extends Employee {
     private String name;
     private String position;
     private int countOfFlight;

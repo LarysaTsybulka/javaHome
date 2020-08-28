@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+package calculator;
 
 public class Calculator {
     private int a;

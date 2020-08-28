@@ -1,3 +1,7 @@
+package employees;
+
+import employees.Director;
+
 public class EmployeeMain {
     public static void main(String[] args){
         Teacher teacher = new Teacher("Александра", "учитель биологии", 25);

@@ -1,3 +1,5 @@
+package cars;
+
 public class DAF extends TruckAuto{
     private int yearOfProduction;
     private String model;

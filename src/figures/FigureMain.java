@@ -1,3 +1,7 @@
+package figures;
+
+import figures.Circle;
+
 public class FigureMain {
     public static void main(String[] args){
         Triangle triangle = new Triangle(4,7,8);

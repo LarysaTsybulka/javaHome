@@ -1,3 +1,5 @@
+package cars;
+
 public class TruckAuto {
     private String engine;
     private int liftingCapacity;
