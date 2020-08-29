@@ -1,43 +1,25 @@
 package calculator;
 
 public class Calculator {
-    private int a;
-    private int b;
+     private CalculatorParametrs parametrs;
 
-    public Calculator(int a, int b) {
-        this.a = a;
-        this.b = b;
-    }
-
-    public int getA() {
-        return a;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public int getB() {
-        return b;
-    }
-
-    public void setB(int b) {
-        this.b = b;
+    public Calculator(CalculatorParametrs parametrs) {
+        this.parametrs = parametrs;
     }
 
     public int addition() {
-        return a + b;
+        return parametrs.getA() + parametrs.getB();
     }
 
     public int subtraction() {
-        return a - b;
+        return parametrs.getA() - parametrs.getB();
     }
 
     public int multiplication() {
-        return a * b;
+        return parametrs.getA() * parametrs.getB();
     }
 
     public int division() {
-        return b != 0 ? a / b : 0;
+        return parametrs.getA() / parametrs.getB();
     }
 }

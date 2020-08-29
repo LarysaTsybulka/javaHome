@@ -1,6 +1,6 @@
 package figures;
 
-public class Circle {
+public class Circle extends Figure{
     private int d;
     private static final double PI = Math.PI;
 

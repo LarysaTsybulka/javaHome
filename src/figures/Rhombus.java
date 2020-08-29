@@ -1,6 +1,6 @@
 package figures;
 
-public class Rhombus {
+public class Rhombus extends Figure{
     private int a;
     private int h;
 
@@ -25,6 +25,7 @@ public class Rhombus {
         this.h = h;
     }
 
+    @Override
     public double area(){
         double S;
         S = a*h;

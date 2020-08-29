@@ -37,6 +37,7 @@ public class Triangle extends Figure {
         return c;
     }
 
+    @Override
     public double area(){
         double S,p;
         p = (a+b+c)/2;
