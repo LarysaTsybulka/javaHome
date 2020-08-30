@@ -1,12 +1,14 @@
 package game.participant;
 
+import java.util.Set;
+
 public class Participant {
     private int numberOfParticipant;
-    private int[] ticket;
+    private Set<Integer> ticket;
     private boolean isPlayer;
     private boolean isWinner;
 
-    public Participant(int numberOfParticipant, int[] ticket) {
+    public Participant(int numberOfParticipant, Set<Integer> ticket) {
         this.numberOfParticipant = numberOfParticipant;
         this.ticket = ticket;
         this.isPlayer = false;
@@ -17,16 +19,8 @@ public class Participant {
         return numberOfParticipant;
     }
 
-    public void setNumberOfParticipant(int numberOfParticipant) {
-        this.numberOfParticipant = numberOfParticipant;
-    }
-
-    public int[] getTicket() {
+    public Set<Integer> getTicket() {
         return ticket;
-    }
-
-    public void setTicket(int[] ticket) {
-        this.ticket = ticket;
     }
 
     public boolean isPlayer() {
@@ -43,12 +37,5 @@ public class Participant {
 
     public void setWinner(boolean winner) {
         isWinner = winner;
-    }
-    public String getInfo(){
-        System.out.println("Номер игрока: "+ getNumberOfParticipant()+ " Билет с числами: " + getTicket());
-    }
-    public void getLuckyParticipants(){
-        System.out.println("Номер игрока: "+ getNumberOfParticipant()+ " Билет с числами: " + getTicket()
-        + " Выигрышный?: " + isWinner());
     }
 }

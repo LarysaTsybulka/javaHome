@@ -1,79 +1,53 @@
 package game.simulator;
 
-import game.number_generator.NumberGenerator;
+import game.numbergenerator.NumberGenerator;
 import game.participant.Participant;
 import game.participant.ParticipantFactory;
 
-import java.util.Scanner;
+import java.util.Set;
 
 public class GameSimulator {
-    private int[] combination;
-    //   private Participant[] listOfParticipant;
+    private static final int SIZE_OF_COMBINATION = 6;
 
-    public static void generateCombination(int countOfNumbers) {
-        int[] combination = NumberGenerator.generateNumbers(countOfNumbers);
+    private Set<Integer> combination;
+    private Participant[] participants;
+
+    public GameSimulator(int countOfParticipant) {
+        this.participants = ParticipantFactory.createParticipant(countOfParticipant);
+        combination = NumberGenerator.generateNumbers(SIZE_OF_COMBINATION);
     }
 
-  /*  public static void showCombination() {
-        System.out.println(combination);
-    }*/
-
-    public static int enterCountOfParticiant() {
-        Scanner in = new Scanner(System.in);
-        int countOfParticipant = in.nextInt();
-        return countOfParticipant;
+    public Set<Integer> getCombination() {
+        return combination;
     }
 
-    /*    public void generateOfParticipants (int countOfParticipant){
-            listOfParticipant = ParticipantFactory.createParticipant(countOfParticipant);
-        }*/
-    public static void showParticipants(Participant[] listOfParticipant) {
-        for (Participant participant : listOfParticipant) {
-            participant.getInfo();
-        }
+    public Participant[] getParticipants() {
+        return participants;
     }
 
-    public static void choosePlayer(Participant[] listOfParticipant) {
-        Scanner in = new Scanner(System.in);
-        int numberOfPlayer = in.nextInt();
-        for (int i = 0; i < listOfParticipant.length; i++) {
-            if (listOfParticipant[i].getNumberOfParticipant() == numberOfPlayer) {
-                listOfParticipant[i].setPlayer(true);
+    public void choosePlayer(int numberOfPlayer) {
+        for (int i = 0; i < participants.length; i++) {
+            if (participants[i].getNumberOfParticipant() == numberOfPlayer) {
+                participants[i].setPlayer(true);
+                break;
             }
         }
     }
 
-    public static void findLuckyParticipants(Participant[] listOfParticipant, int[] combination) {
-        boolean condition = false;
-        for (Participant participant : listOfParticipant) {
-            for (int i = 0; i < participant.getTicket().length; i++) {
-                for (int j = 0; j < combination.length; j++) {
-                    if (participant.getTicket()[i] == combination[j]) {
-                        condition = true;
-                    } else {
-                        condition = false;
-                    }
-                }
-            }
-            if (condition) {
+    public void findLuckyParticipants() {
+        for (Participant participant : participants) {
+            if (combination.containsAll(participant.getTicket())) {
                 participant.setWinner(true);
             }
         }
     }
 
-    public static void showResults(Participant[] listOfParticipant) {
-        for (Participant participant : listOfParticipant) participant.getLuckyParticipants();
-    }
-
-    public static void checkPlayer(Participant[] listOfParticipant) {
-        for (Participant participant : listOfParticipant) {
+    public Participant getActivePlayer() {
+        for (Participant participant : participants) {
             if (participant.isPlayer()) {
-                if (participant.isWinner()) {
-                    System.out.println("Вы выиграли!");
-                } else {
-                    System.out.println("Вы проиграли!");
-                }
+                return participant;
             }
         }
+        return null;
     }
 }
