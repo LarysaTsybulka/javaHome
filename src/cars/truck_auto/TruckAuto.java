@@ -1,4 +1,4 @@
-package cars;
+package cars.truck_auto;
 
 public class TruckAuto {
     private String engine;
@@ -26,6 +26,7 @@ public class TruckAuto {
     }
 
     public void getInfo(){
-        System.out.println("Грузовой автомобиль находится на разработке");
+        System.out.println("Грузовой автомобиль находится на разработке"+ " двигатель "
+        + getEngine()+ " грузоподьемность "+getLiftingCapacity());
     }
 }

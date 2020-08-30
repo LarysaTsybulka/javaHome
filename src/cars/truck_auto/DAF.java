@@ -1,4 +1,4 @@
-package cars;
+package cars.truck_auto;
 
 public class DAF extends TruckAuto{
     private int yearOfProduction;
