@@ -25,8 +25,8 @@ public class PassengerAuto {
         this.engine = engine;
     }
 
-    public void getInfo(){
-        System.out.println("Легковой автомобиль находится на разработке" + " двигатель " + getEngine()
-        + " количество пассажиров " +getCountOfPassenger());
+    public String getInfo(){
+        return "Легковой автомобиль находится на разработке" + " двигатель " + getEngine()
+        + " количество пассажиров " +getCountOfPassenger();
     }
 }

@@ -27,8 +27,8 @@ public class Kia extends TruckAuto {
     }
 
     @Override
-    public void getInfo(){
-        System.out.println("Грузовой автомобиль " + getModel()+ " двигатель " + super.getEngine() +
-                " грузоподъемность "+ super.getLiftingCapacity() + " страна производитель "+ getCountryOfProduction());
+    public String getInfo(){
+        return "Грузовой автомобиль " + getModel()+ " двигатель " + super.getEngine() +
+                " грузоподъемность "+ super.getLiftingCapacity() + " страна производитель "+ getCountryOfProduction();
     }
 }

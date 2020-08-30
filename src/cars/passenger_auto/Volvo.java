@@ -27,8 +27,8 @@ public class Volvo extends PassengerAuto {
     }
 
     @Override
-    public void getInfo() {
-        System.out.println("Легковой автомобиль " + getModel() + " двигатель " + getEngine()
-                + " количество пассажиров " +getCountOfPassenger()+ " страна производитель " + getCountryOfProduction());
+    public String getInfo() {
+        return "Легковой автомобиль " + getModel() + " двигатель " + getEngine()
+                + " количество пассажиров " +getCountOfPassenger()+ " страна производитель " + getCountryOfProduction();
     }
 }

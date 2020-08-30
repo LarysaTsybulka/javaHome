@@ -26,8 +26,8 @@ public class Citroen extends TruckAuto {
         this.model = model;
     }
     @Override
-    public void getInfo() {
-        System.out.println("Грузовой автомобиль " + getModel()+ " двигатель " + super.getEngine() +
-                " грузоподъемность "+ super.getLiftingCapacity() + " цена "+ getPrice());
+    public String getInfo() {
+        return "Грузовой автомобиль " + getModel()+ " двигатель " + super.getEngine() +
+                " грузоподъемность "+ super.getLiftingCapacity() + " цена "+ getPrice();
     }
 }

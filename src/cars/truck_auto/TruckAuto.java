@@ -25,8 +25,8 @@ public class TruckAuto {
         this.liftingCapacity = liftingCapacity;
     }
 
-    public void getInfo(){
-        System.out.println("Грузовой автомобиль находится на разработке"+ " двигатель "
-        + getEngine()+ " грузоподьемность "+getLiftingCapacity());
+    public String getInfo(){
+        return "Грузовой автомобиль находится на разработке двигатель " +
+                getEngine()+ " грузоподьемность "+getLiftingCapacity();
     }
 }

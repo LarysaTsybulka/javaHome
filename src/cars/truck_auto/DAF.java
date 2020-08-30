@@ -27,8 +27,8 @@ public class DAF extends TruckAuto{
     }
 
     @Override
-    public void getInfo() {
-        System.out.println("Грузовой автомобиль " + getModel()+ " двигатель " + super.getEngine() +
-                " грузоподъемность "+ super.getLiftingCapacity() + " год выпуска "+getYearOfProduction());
+    public String getInfo() {
+        return "Грузовой автомобиль " + getModel()+ " двигатель " + super.getEngine() +
+                " грузоподъемность "+ super.getLiftingCapacity() + " год выпуска "+getYearOfProduction();
     }
 }

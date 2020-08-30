@@ -27,8 +27,8 @@ public class Mercedes extends PassengerAuto {
     }
 
     @Override
-    public void getInfo() {
-        System.out.println("Легковой автомобиль " + getModel() + " двигатель " + getEngine()
-                + " количество пассажиров " +getCountOfPassenger()+ " цена " + getPrice());
+    public String getInfo() {
+        return "Легковой автомобиль " + getModel() + " двигатель " + getEngine()
+                + " количество пассажиров " +getCountOfPassenger()+ " цена " + getPrice();
     }
 }

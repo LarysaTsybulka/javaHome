@@ -44,7 +44,7 @@ public class Participant {
     public void setWinner(boolean winner) {
         isWinner = winner;
     }
-    public void getInfo(){
+    public String getInfo(){
         System.out.println("Номер игрока: "+ getNumberOfParticipant()+ " Билет с числами: " + getTicket());
     }
     public void getLuckyParticipants(){
